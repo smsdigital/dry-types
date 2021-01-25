@@ -9,8 +9,13 @@ module Dry
       attr_reader :type
 
       # @param [Type] type
-      def initialize(type, *)
-        super
+      def initialize(type, *args)
+        if args.last.is_a?(::Hash)
+          hash_arg = args.pop
+          super(type, *args, **hash_arg)
+        else
+          super(type, *args)
+        end
         @type = type
       end
 
