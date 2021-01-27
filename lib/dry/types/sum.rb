@@ -40,7 +40,7 @@ module Dry
       # @param [Type] right
       # @param [Hash] options
       def initialize(left, right, options = {})
-        super
+        super(left, right, **options)
         @left, @right = left, right
         freeze
       end
