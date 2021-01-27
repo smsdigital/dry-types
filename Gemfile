@@ -23,4 +23,4 @@ group :benchmarks do
   gem 'dry-struct'
 end
 
-gem 'dry-logic', git: 'https://github.com/smsdigital/dry-logic', branch: 'feature/dsa-1374-ruby-2.7-update'
+gem 'dry-logic', '~> 0.4.2', git: 'https://github.com/smsdigital/dry-logic', tag: 'v0.4.2.1'
